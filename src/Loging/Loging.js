@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
-import auth from '../Firebase/fire.base.init';
+import auth from '../Firebase/fire.base.init'; 
+import "./Loging.css"
 
 
 const Loging = () => {
@@ -21,7 +22,11 @@ const Loging = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
-
+        // signIn with goole 
+      const [signInWithGoogle, users] = useSignInWithGoogle(auth);
+      if (users) {
+        navigate("/")
+    }
     // show error user and loading 
 
     if (error) {
@@ -37,7 +42,11 @@ const Loging = () => {
     
       if(user){ 
           navigate("/")
-      }
+      } 
+     
+
+             
+
     // handle loging form
     const loginFormHandle = (e) => {
         e.preventDefault();
@@ -59,8 +68,10 @@ const Loging = () => {
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input onBlur={handlePassword} type="password" class="form-control" id="exampleInputPassword1" />
                 </div>
-
+                <div className='btns'>  
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <button  onClick={() => { signInWithGoogle() }} class="btn btn-primary"> SignIn Google</button>
+                </div>
             </form> 
             <h3> Creat a New Account    </h3> 
              <Link className='btn btn-danger' to="/register"> Ragister   </Link>
