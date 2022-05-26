@@ -1,29 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Tools = () => {
     const [tools, setTools] = useState([])
     useEffect(() => {
-        fetch("data.json")
+        fetch("http://localhost:5000/item")
             .then(res => res.json())
             .then(data => setTools(data))
-    }, [])
+    }, []) 
+    const navigate = useNavigate()
+    const navigateDetails =(id)=>{ 
+        navigate(`/details/${id}`)
+     } 
+
     return (
         <div className='container'>
             <h2> Tools </h2>
             <div className="row">
                 {
                     tools.map((tool) => {
-                      
+                      const {_id,name,img,des,quantity} = tool
                         return (
                             <div className="col-lg-4 d-block d-lg-flex">
                                 <div className="card" >
-                                    <img src= {tool.img} className="card-img-top" alt="..."/>
+                                    <img src= {img} className="card-img-top" alt="..."/>
                                         <div className="card-body">
-                                            <h5 className="card-title"> Name:{tool.name} </h5>
-                                            <p className="card-text"> {tool.des} </p> 
-                                            <p className="card-text"> {tool.quantity} </p>
-                                            <Link to="/" className="btn btn-primary">Go somewhere</Link>
+                                            <h5 className="card-title"> Name:{name} </h5>
+                                            <p className="card-text"> {des} </p> 
+                                            <p className="card-text"> {quantity} </p>
+                                            <button onClick={()=>{navigateDetails(_id)}} to="/" className="btn btn-primary"> BUY NOw</button>
                                         </div>
                                 </div>
                             </div>

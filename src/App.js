@@ -1,6 +1,8 @@
 
 import { Route, Routes } from "react-router-dom";
+import Details from "./Details/Details";
 import Home from "./Home/Home";
+import Loging from "./Loging/Loging";
 import Navbar from "./Navbar/Navbar";
 import Tools from "./Tools/Tools";
 
@@ -12,7 +14,9 @@ function App() {
            <Navbar></Navbar> 
           <Routes> 
             <Route path="/" element={<Home></Home>}>   </Route>
-            <Route path="/tools" element={ <Tools></Tools>}> </Route>
+            <Route path="/tools" element={ <Tools></Tools>}> </Route> 
+          <Route path="/details/:id" element={ <Details></Details>}> </Route> 
+          <Route path="/loging" element={ <Loging></Loging> }> </Route> 
  
           </Routes>
    
