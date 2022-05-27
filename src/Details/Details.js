@@ -13,7 +13,15 @@ const Details = ({ children }) => {
             .then(data => setDetails(data))
     }, [])
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => console.log(data); 
+           const [count,setCount] = useState('1')
+          const handleQuantity =(e)=>{ 
+                setCount(+e.target.value) 
+                 
+          }
+            const orderPurchase =()=>{ 
+                window.confirm("are You sure want to purchase?")
+            }
     return (
 
         <div className='container'>
@@ -30,14 +38,18 @@ const Details = ({ children }) => {
                    <div className="forms"> 
                          <div className="quantity"> 
                          <h1> Quantity</h1> 
-                         <input placeholder='Enter Quantity' className='w-50 ' type="number" />
+                         <input onChange={handleQuantity} placeholder='Enter Quantity' className='w-50 ' type="number" />  
+                          <p style={{color:"red"}}> {count<details.qunatity && count>=50?" Yes you can order Now  ":"you have to be  ordered at least 50"} </p>
+                          <p style={{color:"red"}}> {count>=details.qunatity ?"product are not available":""} </p>
                          </div>
                    <form onSubmit={handleSubmit(onSubmit)}>
+                 
+                   
                  
                         <input placeholder='Name' {...register("Name", { required: true, })} /> <br />
                         <input placeholder='Phone' type= "number" {...register("Phone")} /> <br />
                         <input placeholder='Email' type="email" {...register("Email")} /> <br />
-                        <input type="submit" />
+                        <input onClick={()=>{orderPurchase()} } type="submit" disabled={count<=details.qunatity && count>=50 ? false:true } />
                     </form>
                    
                    </div>
