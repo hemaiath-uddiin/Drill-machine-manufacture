@@ -6,13 +6,13 @@ const DashBoard = () => {
            <div className="container"> 
              
              <div className="row"> 
-                <div className="col-lg-3"> 
+                <div className="col-lg-3 dash"> 
                   <Link to="/dashboard"> My Orders  </Link>
                   <Link to="/dashboard/review"> Add Review  </Link>
                   <Link to="/dashboard/myprofile"> My Profile  </Link>
                 </div> 
                 <div className="col-lg-9"> 
-                      <h2>  Dashboard</h2>
+                     
                       <Outlet />
                 
                 </div>

@@ -1,0 +1,16 @@
+.recentWork a {
+    padding: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+} 
+h2 {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: #5f5f97;
+} 
+.dash a {font-size: 20px;text-decoration: none;font-weight: bold;margin: 10px 5px;}
+
+.dash {background: #f3f3f3;margin-top: 42px;}
+
+.dash a:hover {color: bal;color: bal;color: black;text-decoration: underline;}

@@ -12,7 +12,23 @@ const Order = () => {
             .then(data=>setOrder(data))
         }
      },[user])
-   
+      // handle delet 
+
+        const handleDelet =(id)=>{ 
+              const proceed = window.confirm("are you sure want to delet") 
+              if(proceed){ 
+                const url = `http://localhost:5000/orders/${id}`
+                fetch(url,{ 
+                    method: "DELETE"
+                }) 
+                .then(res=>res.json()) 
+            .then(data=>{ 
+                 const remaining = order.filter(orders=>orders._id !==id)
+                    setOrder(remaining)
+                console.log("success",data);
+            })
+              }
+        }
     return (
         <div>
             <table class="table">
@@ -31,7 +47,7 @@ const Order = () => {
             <td> {a.Name}</td>
             <td> {a.Email} </td>
             <td> {a.Phone} </td> 
-            <button className='btns'> Delet</button>
+            <button onClick={()=>{handleDelet(a._id)}} className='btns'> Delet</button>
           </tr>)
         }
    
