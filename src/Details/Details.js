@@ -67,7 +67,7 @@ const Details = ({ children }) => {
 
 
 
-                            <input placeholder='Name' {...register("Name")} /> <br />
+                            <input value={user.displayName} placeholder='Name' {...register("Name")} /> <br />
                             <input placeholder='Phone' type="number" {...register("Phone")} /> <br />
                             <input value={user.email} placeholder='Email' type="email" {...register("Email")} /> <br />
                             <input onClick={() => { orderPurchase() }} type="submit" disabled={count <= details.qunatity && count >= 50 ? false : true} />

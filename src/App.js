@@ -1,6 +1,9 @@
 
 import { Route, Routes } from "react-router-dom";
 import DashBoard from "./DashBoard/DashBoard";
+import Myprofile from "./DashBoard/Myprofile";
+import Order from "./DashBoard/Order";
+import Review from "./DashBoard/Review";
 import Details from "./Details/Details";
 import Home from "./Home/Home";
 import Loging from "./Loging/Loging";
@@ -18,16 +21,19 @@ function App() {
            <Navbar></Navbar> 
           <Routes> 
             <Route path="/" element={<Home></Home>}>   </Route>
-            <Route path="/tools" element={ <Tools></Tools>}> </Route> 
+            <Route path="tools" element={ <Tools></Tools>}> </Route> 
           <Route path="/details/:id" element={ <Details></Details>}> </Route> 
-          <Route path="/loging" element={ <Loging></Loging> }> </Route> 
+          <Route path="loging" element={ <Loging></Loging> }> </Route> 
           <Route path="/register" element={ <Register></Register> }> </Route> 
-          <Route path='/dashboard' element={
-               <RequerAuth> <DashBoard></DashBoard> </RequerAuth>
-
-            } > </Route>
-         
-          <Route path="/dashboard" element={ <Register></Register> }> </Route> 
+          <Route path="dashboard" element={ 
+          
+                 <DashBoard></DashBoard>
+              }> 
+          <Route index element={<Order />} />
+          <Route path="myprofile" element={<Myprofile />} />
+          <Route path="review" element={<Review />} />
+          
+          </Route>
  
           </Routes>
    
