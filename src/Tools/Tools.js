@@ -5,7 +5,7 @@ import './Tool.css'
 const Tools = () => {
     const [tools, setTools] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/item")
+        fetch("https://floating-tor-10144.herokuapp.com/item")
             .then(res => res.json())
             .then(data => setTools(data))
     }, [])

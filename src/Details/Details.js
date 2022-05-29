@@ -11,7 +11,7 @@ const Details = ({ children }) => {
     const { id } = useParams()
     const [details, setDetails] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/item/${id}`
+        const url = `https://floating-tor-10144.herokuapp.com/item/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setDetails(data))
@@ -21,7 +21,7 @@ const Details = ({ children }) => {
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
         console.log(data);
-        fetch('http://localhost:5000/order', {
+        fetch('https://floating-tor-10144.herokuapp.com/order', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

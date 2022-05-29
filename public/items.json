@@ -1,0 +1,14 @@
+  [ 
+      {   
+          "rating": 5 ,
+           "description": "Cordless drills are more powerful than they ve ever been, yet theyve also gotten "
+      }, 
+      {  
+        "rating": 4 ,
+         "description": "the drill front better than most."
+    }, 
+    {  
+        "rating": 3 ,
+         "description": "the product is really good"
+    }
+  ]

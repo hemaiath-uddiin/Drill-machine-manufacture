@@ -7,7 +7,7 @@ const Order = () => {
      const [user] = useAuthState(auth);
      useEffect(()=>{ 
         if(user){ 
-            fetch(`http://localhost:5000/orders? name=${user.email}`)
+            fetch(`https://floating-tor-10144.herokuapp.com/orders? name=${user.email}`)
             .then(res=>res.json()) 
             .then(data=>setOrder(data))
         }
@@ -17,7 +17,7 @@ const Order = () => {
         const handleDelet =(id)=>{ 
               const proceed = window.confirm("are you sure want to delet") 
               if(proceed){ 
-                const url = `http://localhost:5000/orders/${id}`
+                const url = `https://floating-tor-10144.herokuapp.com/orders/${id}`
                 fetch(url,{ 
                     method: "DELETE"
                 }) 

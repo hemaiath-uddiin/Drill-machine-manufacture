@@ -10,7 +10,7 @@ const Myprofile = () => {
     const { register,handleSubmit} = useForm();
     const onSubmit =(data)=>{ 
           console.log(data);
-        fetch('http://localhost:5000/profile', {
+        fetch('https://floating-tor-10144.herokuapp.com/profile', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
