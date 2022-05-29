@@ -26,11 +26,11 @@ const Navbar = () => {
               </li> 
               <li className="nav-item">
                 <Link className="nav-link" to="/service"> Services </Link>
-              </li> 
-              <li className="nav-item">
-                <Link className="nav-link" to="/"> About</Link>
-                
               </li>  
+              <li className="nav-item">
+                <Link className="nav-link" to="/blog"> BLog </Link>
+              </li> 
+               
               <li className="nav-item">
                   { 
                      user && <Link className="nav-link" to="/dashboard"> DashBoard</Link>
