@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-
+import './Details.css'
 import { useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../Firebase/fire.base.init';
 import { useForm } from "react-hook-form";
-import "./Details.css"
+
 
 const Details = ({ children }) => {
     const [user] = useAuthState(auth);

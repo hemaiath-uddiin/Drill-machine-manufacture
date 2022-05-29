@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; 
+import './Tool.css'
 
 const Tools = () => {
     const [tools, setTools] = useState([])
@@ -28,7 +29,7 @@ const Tools = () => {
                                             <h5 className="card-title"> Name:{name} </h5>
                                             <p className="card-text"> {des} </p> 
                                             <p className="card-text"> {quantity} </p>
-                                            <button onClick={()=>{navigateDetails(_id)}} to="/" className="btn btn-primary"> BUY NOw</button>
+                                            <button onClick={()=>{navigateDetails(_id)}} className="btn btn-primary"> BUY NOw</button>
                                         </div>
                                 </div>
                             </div>

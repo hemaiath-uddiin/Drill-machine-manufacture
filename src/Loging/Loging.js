@@ -1,3 +1,5 @@
+import { calculateNewValue } from '@testing-library/user-event/dist/utils';
+import { isSignInWithEmailLink } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useNavigate,useLocation } from 'react-router-dom';
@@ -9,9 +11,7 @@ const Loging = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')  
     const navigate = useNavigate() 
-    const location = useLocation();  
-    const from = location.state?.from?.pathname||'/'
-
+    
     const handleEmail = (e) => {
         setEmail(e.target.value)
     }
@@ -24,7 +24,11 @@ const Loging = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+      ] = useSignInWithEmailAndPassword(auth); 
+
+         if(user) { 
+          navigate("/")
+         }
         // signIn with goole 
       const [signInWithGoogle, users] = useSignInWithGoogle(auth);
       if (users) {
@@ -33,7 +37,7 @@ const Loging = () => {
     // show error user and loading 
 
     if (error) {
-        return (
+        return (  
           <div>
             <p>Error: {error.message}</p>
           </div>
@@ -43,10 +47,8 @@ const Loging = () => {
         return <p>Loading...</p>;
       } 
     
-      if(user){ 
-          navigate(from, {replace:true})
-      } 
-     
+   
+   
       
              
 
