@@ -5,8 +5,8 @@ const Banner = () => {
        <div className="container baner"> 
           <div className="row"> 
              <div className="col-lg-6"> 
-               <h1> well come to Our website</h1> 
-               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio suscipit libero commodi nemo at, cupiditate rem enim rerum provident distinctio.</p> 
+               <h1> Wellcome to Our website</h1> 
+               <p style={{fontSize:"30px", fontWeight:"bold"}}> Here in this website you would get Best Drill Machine, the quality i good and the price is very reasonable.</p> 
                <button className='btn btn-primary'> For More Information </button>
              </div> 
              <div className="col-lg-6"> 
