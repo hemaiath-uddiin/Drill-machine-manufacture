@@ -12,6 +12,7 @@ import Loging from "./Loging/Loging";
 import Navbar from "./Navbar/Navbar";
 import NeedAuth from "./NeedAuth/NeedAuth";
 import NotFound from "./NotFound/NotFound";
+import Protfolio from "./Protfolio/Protfolio";
 import Register from "./Register/Register";
 
 import Service from "./Service/Service";
@@ -26,6 +27,7 @@ function App() {
            <Navbar></Navbar> 
           <Routes> 
             <Route path="/" element={<Home></Home>}>   </Route>
+            <Route path="/protfolio" element={<Protfolio />}>   </Route>
             <Route path="/tools" element={ <Tools></Tools>}> </Route> 
             <Route path="*" element={ <NotFound></NotFound>}> </Route> 
             <Route path="/service" element={<Service></Service>}> </Route> 

@@ -30,7 +30,7 @@ const Details = ({ children }) => {
         })
             .then(response => response.json())
             .then(data => {
-                alert('Success:', data);
+                console.log( data);
             })
     }
 

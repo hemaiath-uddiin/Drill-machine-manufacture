@@ -13,4 +13,14 @@ h2 {
 
 .dash {background: #f3f3f3;margin-top: 42px;}
 
-.dash a:hover {color: bal;color: bal;color: black;text-decoration: underline;}
+.dash a:hover {color: bal;color: bal;color: black;text-decoration: underline;} 
+p.email {
+    font-size: 30px;
+    color: rebeccapurple;
+} 
+
+
+p.profesion {
+    font-size: 30px;
+    font-weight: bold;
+}
