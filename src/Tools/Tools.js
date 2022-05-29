@@ -18,7 +18,7 @@ const Tools = () => {
             <h2> Tools </h2>
             <div className="row">
                 {
-                    tools.map((tool) => {
+                    tools.map((tool) => { 
                       const {_id,name,img,des,quantity} = tool
                         return (
                             <div className="col-lg-4 d-block d-lg-flex">

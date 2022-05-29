@@ -10,6 +10,7 @@ import Loging from "./Loging/Loging";
 import Navbar from "./Navbar/Navbar";
 import Register from "./Register/Register";
 import RequerAuth from "./RequerAuth/RequerAuth";
+import Service from "./Service/Service";
 import Tools from "./Tools/Tools"; 
 
 
@@ -22,10 +23,14 @@ function App() {
           <Routes> 
             <Route path="/" element={<Home></Home>}>   </Route>
             <Route path="tools" element={ <Tools></Tools>}> </Route> 
-          <Route path="/details/:id" element={ <Details></Details>}> </Route> 
-          <Route path="loging" element={ <Loging></Loging> }> </Route> 
+            <Route path="/service" element={<Service></Service>}> </Route> 
+          <Route path="/details/:id" element={  
+               <RequerAuth> <Details></Details> </RequerAuth>
+          
+          }> </Route> 
+          <Route path="/loging" element={ <Loging></Loging> }> </Route> 
           <Route path="/register" element={ <Register></Register> }> </Route> 
-          <Route path="dashboard" element={ 
+          <Route path="/dashboard" element={ 
           
                  <DashBoard></DashBoard>
               }> 
