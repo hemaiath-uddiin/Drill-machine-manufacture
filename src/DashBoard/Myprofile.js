@@ -34,12 +34,7 @@ const Myprofile = () => {
                     <h1>  {user.displayName}</h1>
                     <p className='email'> Email: {user.email}</p>
                     <p className='profesion' >Profession: Student</p>
-                    <div className="recentWork">
-                        <h2>My Best works</h2>
-                        <a href="https://travel-guide-82920.web.app/"> Travel Guide</a>
-                        <a href="https://iphone-warehouse-auth.web.app/"> WareHouse</a>
-                        <a href="https://curious-moonbeam-cf0693.netlify.app/"> best website </a>
-                    </div>
+                    
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input placeholder='Education' {...register("education" )} />
                         <input placeholder='City' {...register(" city")} />
