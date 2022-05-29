@@ -1,5 +1,5 @@
 import React from 'react';
-
+ import "./Service.css"
 const Service = () => {
       const data =[ 
           {  
@@ -20,17 +20,17 @@ const Service = () => {
       ]
     return (
         <div className='container service'>
-            <h2> provide Services </h2>
+            <h2 className='provide_ser'> provide Services </h2>
             <div className="row">
                   { 
                     data.map((item)=>{ 
                         return( 
                             <div className="col-lg-4">
-                            <div className="card" >
+                            <div className="card card_item" >
                           
                                     <div className="card-body">
-                                        <h5 className="card-title"> {item.titel} </h5>
-                                        <p className="card-text"> {item.des} </p>
+                                        <h5 className="card-title des"> {item.titel} </h5>
+                                        <p className="card-text paragrap"> {item.des} </p>
                                         
                                     </div>
                             </div>
