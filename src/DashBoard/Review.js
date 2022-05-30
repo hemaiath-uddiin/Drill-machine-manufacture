@@ -5,7 +5,7 @@ import "./SingleReview.css"
 const Review = () => {
     const { register, handleSubmit,  formState: { errors }, } = useForm();
     const onSubmit = (data)=>{ 
-        fetch('http://localhost:5000/review', {
+        fetch('https://floating-tor-10144.herokuapp.com/review', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
