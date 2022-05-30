@@ -18,7 +18,7 @@ const Details = ({ children }) => {
     }, [])
 
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit , } = useForm();
     const onSubmit = (data) => {
         console.log(data);
         fetch('https://floating-tor-10144.herokuapp.com/order', {
@@ -31,15 +31,18 @@ const Details = ({ children }) => {
             .then(response => response.json())
             .then(data => {
                 console.log( data);
-            })
+            })  
+           
+          
     }
 
 
     const [count, setCount] = useState('1')
     const handleQuantity = (e) => {
         setCount(+e.target.value)
-
-    }
+        
+    } 
+  
     const orderPurchase = () => {
         window.confirm("are You sure want to purchase?")
     }

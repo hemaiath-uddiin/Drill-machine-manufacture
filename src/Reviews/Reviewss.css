@@ -1,3 +1,22 @@
-.rating_wraper {background: #edededba;border: 1px solid silver;text-align: center;padding: 5px;margin: 5px 0px;}
+/* .rating_wraper {background: #edededba ; border: 1px solid silver;text-align: center;padding: 5px;margin: 5px 0px }
 
-span.ranting {color: white}
+span.ranting {color: white}   */
+h1.rantin_num {
+    background: #403c3c; 
+    text-align: center;
+} 
+span.ranting {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+} 
+h1.rantin_num {
+    color: yellow;
+}  
+
+p.rating_des {
+    font-size: 20px;
+    font-weight: bold;
+    background: #c9c9c9;
+    padding: 20px;
+}

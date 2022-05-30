@@ -1,9 +1,27 @@
 .forms input {width: 100%;padding: 10px 5px;margin: 10px 0px;outline: none;} 
 .quantity {text-align: center;margin-bottom: 20px;}
-
+.forms {
+    background: #ffef9f;
+    padding: 10px;
+    box-shadow: 1px 0px 5px 2px #363636;
+}
 .quantity input {outline: none;border-color: #7c7683;border-top: none;border-left: none;border-right: none;} 
 /* button.btn.btn-primary {color: #eb0021;} */
 
 button.btns {margin: 10px 0px;background: red !important;border: none;border-radius: 11px;color: white;font-weight: bold; } 
 
-button.btns:hover {background: black;}
+button.btns:hover {background: black;} 
+.users {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 4px;
+} 
+button.signOut {
+    background: #ff4d4d;
+    margin: 8px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}

@@ -9,4 +9,13 @@
     font-size: 30px;
     font-weight: bold;
     color: rebeccapurple;
+} 
+.row.protfolio {margin-top: 20px;background: #ebebeb;}
+
+
+
+.ul a {font-size: 30px;text-decoration: none;font-weight: bold;color: black;margin: 10px;} 
+.best_works a {
+    font-size: 30px;
+    text-decoration: none;
 }

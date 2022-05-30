@@ -51,6 +51,16 @@ const Navbar = () => {
                
                
                 
+              </li> 
+              <li className="nav-item users">
+                   { 
+                      user? user.displayName
+                      :  
+                       " No user"
+                   }
+               
+               
+                
               </li>
             
             
