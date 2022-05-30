@@ -1,0 +1,10 @@
+
+
+.review {background:  silver;padding: 10px;text-align: center;}
+
+form.review_input {padding: 10px;margin: 10px;}
+
+.review_input input {margin: 10px;padding: 20px;border: none;border-bottom: 2px solid #777785;outline: none;width: 100%;border-radius: 10px;} 
+.inputReview {background: cornflowerblue;color: white;font-weight: bold;font-size: 20px;}
+
+form.review_input:hover {background: radial-gradient(black, transparent);transition: 0.5s;}

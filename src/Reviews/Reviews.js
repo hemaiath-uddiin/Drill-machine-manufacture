@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import './Reviewss.css'
 const Reviews = () => {
        const [review,setReview] = useState([]) 
        useEffect(()=>{ 
@@ -14,9 +14,9 @@ const Reviews = () => {
                        { 
                          review.map((review,_id)=>{ 
                              return( 
-                                 <div key={_id} className="col-lg-4"> 
-                                      <h1> Rating {review.rating} </h1> 
-                                       <p> comments {review.description}  </p>
+                                 <div key={_id} className="col-lg-4 rating_wraper"> 
+                                      <h1 className='rantin_num'> <span className='ranting'>Rating</span> {review.rating} </h1> 
+                                       <p className='rating_des'> <span className='comments'>comments:</span> {review.firstName}  </p>
                                  </div>
                              )
                          })
