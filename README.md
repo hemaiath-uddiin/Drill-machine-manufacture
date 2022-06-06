@@ -1,10 +1,15 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Manufacturing website](https://final-project-dda07.web.app/).
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project you will find 
+* a manufacturing websites of drill machine.
+* a user can buy different drill products
+* can operate the website smoothly 
+* also find dynamic user email and name
+* firebase authentication system is also used 
 
 ### `npm start`
 
