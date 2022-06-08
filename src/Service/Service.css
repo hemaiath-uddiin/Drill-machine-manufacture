@@ -1,4 +1,4 @@
-.service {background: black;}
+
 
 
 .card_item {background: #d7d7d7;} 
@@ -11,6 +11,6 @@
 } 
 .provide_ser {
     padding: 10px;
-    color: #dfdfdf;
+    color: black;
     text-transform: capitalize;
 } 

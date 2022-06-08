@@ -29,9 +29,12 @@ const Tools = () => {
                                         <h5 className="card-title"> Name:{name} </h5>
                                         <p className="card-text"> {des} </p>
                                         <p className="card-text"> {quantity} </p>
-                                        <button onClick={() => { navigateDetails(_id) }} className="btn btn-primary"> BUY NOw</button>
-                                    </div>
-                                </div>
+                                    
+                                    </div> 
+                                    <button onClick={() => { navigateDetails(_id) }} className="btn btn-primary"> BUY NOw</button>
+                                </div>  
+                              
+
                             </div>
                         )
                     })

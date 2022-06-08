@@ -3,14 +3,14 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../Firebase/fire.base.init';
-
+import "./Navbar.css"
 const Navbar = () => {
   const [user] = useAuthState(auth);
   const SignOut = () => {
     signOut(auth)
   }
   return (
-        <nav className="navbar  navbar-expand-lg navbar-dark bg-primary" >
+        <nav className="navbar navbar sticky-top navbar-expand-lg  navbar-light bg-light" >
         <div className="container-fluid">
           <a className="navbar-brand"  href ="/"> Drill machine Manufacturer</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,9 +27,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link" to="/service"> Services </Link>
               </li>  
-              <li className="nav-item">
-                <Link className="nav-link" to="/blog"> BLog </Link>
-              </li>   
+              
               <li className="nav-item">
                 <Link className="nav-link" to="/protfolio"> My Protfolio </Link>
               </li>  
